@@ -35,8 +35,6 @@ def entry_point():
     # Root endpoint returns a simple message to verify the app's working.
     return 'Roooot, you got the root route up!'
 
-"""
-
 # Here we're using the /callback route.
 @app.route('/callback')
 def callback_handling():
@@ -81,8 +79,6 @@ def logout():
     # Redirect user to logout endpoint
     params = {'returnTo': url_for('home', _external=True), 'client_id': 'dX5sLVv7HCAv1hmrQKoF6T4ofQvIBYCX'}
     return redirect(auth0.api_base_url + '/v2/logout?' + urlencode(params))
-
-"""
 
 # Make this different
 if __name__ == "__main__":
