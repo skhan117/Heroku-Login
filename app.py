@@ -54,7 +54,7 @@ def callback_handling():
 
 @app.route('/login')
 def login():
-    return auth0.authorize_redirect(redirect_uri='https://skhan117.us.auth0.com/login')
+    return auth0.authorize_redirect(redirect_uri='http://staticfeedenv.eba-8552m422.us-west-1.elasticbeanstalk.com/staticfeed')
 
 def requires_auth(f):
   @wraps(f)
